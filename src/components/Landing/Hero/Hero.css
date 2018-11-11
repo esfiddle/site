@@ -1,0 +1,72 @@
+.hero {
+	background: var(--dark);
+	position: relative;
+	height: 42vw;
+	min-height: calc(70vh);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero__image > svg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin: auto;
+	height: 100%;
+	animation: hero-fade-out 1s ease 2.2s forwards;
+	transform: translateX(-50%);
+	opacity: 1;
+	z-index: 0;
+}
+@keyframes hero-fade-out {
+	from {opacity: 1;}
+	to {opacity: 0.1;}
+}
+@keyframes hero-fade-in {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+.hero__text-main {
+	position: relative;
+	opacity: 0;
+	z-index: 1;
+	font-size: 4em;
+	color: var(--medium-1);
+	animation: hero-fade-in 1s ease 2.5s forwards;
+}
+.hero__text-main > span {
+	color: white;
+}
+
+.hero__text-sub {
+	position: relative;
+	z-index: 1;
+	font-size: 3em;
+	opacity: 0;
+	animation: hero-fade-in 1s ease 2.5s forwards;
+	color: var(--light);
+}
+
+.hero__action-buttons > a {
+	position: relative;
+	z-index: 1;
+	color: white;
+	display: inline-block;
+	width: 200px;
+	padding: 16px;
+	border: 1px solid white;
+	border-radius: 3px;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 24px;
+	font-size: 1.4em;
+	opacity: 0;
+	animation: hero-fade-in 1s ease 2.5s forwards;
+}
+.hero__action-buttons > a:hover {
+	background: var(--light);
+	color: var(--dark);
+	border-color: var(--light);
+}
