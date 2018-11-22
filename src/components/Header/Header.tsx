@@ -1,16 +1,19 @@
+import * as dotenv from "dotenv";
 import * as React from 'react';
+import GitHubLogin from "react-github-login";
 import { NavLink } from 'react-router-dom';
-
 import './Header.css';
-
 import SearchBox from './SearchBox/SearchBox';
+
+dotenv.config();
+
 
 interface IHeaderState {
 	theme: string
 }
 
-export default class Header extends React.Component<{}, IHeaderState> {
-	public constructor(props: {}) {
+export default class Header extends React.Component<any, IHeaderState> {
+	public constructor(props: any) {
 		super(props);
 		this.state = {
 			theme: 'dark',
@@ -39,6 +42,24 @@ export default class Header extends React.Component<{}, IHeaderState> {
 	}
 
 	public render() {
+		const content = !!this.props.isAuthenticated ?
+		(
+		<div>
+          <p>Authenticated</p>
+          <div>
+            {this.props.user.email}
+          </div>
+          <div>
+            <button onClick={this.props.logout} className="button" >
+              Log out
+            </button>
+          </div>
+        </div>
+		) : (
+			<GitHubLogin clientId={process.env.REACT_APP_GITHUB_CLIENT_ID}
+			onSuccess={this.props.onSuccess}
+			onFailure={this.props.onFailed}/>
+		);
 		return (
 			<div className={'header header-' + this.state.theme}>
 				<div className={'header__box'}>
@@ -55,7 +76,7 @@ export default class Header extends React.Component<{}, IHeaderState> {
 					<NavLink activeClassName="active" to="/about">About</NavLink>
 					<NavLink activeClassName="active" to="/blog">Blog</NavLink>
 					<div className={'header__user'}>
-						Login
+						{content}
 					</div>
 				</div>
 			</div>

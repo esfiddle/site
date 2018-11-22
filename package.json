@@ -4,20 +4,22 @@
   "private": true,
   "dependencies": {
     "@types/react-codemirror": "^1.0.2",
+    "dotenv": "^6.1.0",
     "history": "^4.7.2",
     "react": "^16.3.2",
     "react-codemirror": "^1.0.0",
     "react-dom": "^16.3.2",
+    "react-github-login": "^1.0.3",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-svg-inline": "^2.1.0"
   },
   "devDependencies": {
+    "@types/dotenv": "^6.1.0",
     "@types/jest": "23.3.9",
     "@types/node": "10.12.10",
     "@types/react": "16.7.7",
     "@types/react-dom": "16.0.10",
-
     "@types/react-router-dom": "^4.2.6",
     "react-scripts-ts": "3.1.0",
     "typescript": "3.1.6"
