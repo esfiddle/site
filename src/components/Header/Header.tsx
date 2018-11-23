@@ -58,7 +58,8 @@ export default class Header extends React.Component<any, IHeaderState> {
 		) : (
 			<GitHubLogin clientId={process.env.REACT_APP_GITHUB_CLIENT_ID}
 			onSuccess={this.props.onSuccess}
-			onFailure={this.props.onFailed}/>
+			onFailure={this.props.onFailed}
+			redirectUri={process.env.REACT_APP_API_URL + "/auth/github/reverse"}/>
 		);
 		return (
 			<div className={'header header-' + this.state.theme}>
