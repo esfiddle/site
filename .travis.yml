@@ -22,3 +22,5 @@ script: npm run test && npm run cover
 after_script: greenkeeper-lockfile-upload
 after_success:
 - bash <(curl -s https://codecov.io/bash)
+notifications:
+  slack: ghentspace:ZLT8kfb3r2v5M0iY2gCN62dd
