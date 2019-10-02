@@ -1,8 +1,8 @@
 import * as React from 'react';
-import * as CodeMirror from 'react-codemirror';
+import { UnControlled as CodeMirror } from 'react-codemirror2';
 
 // Styles
-import 'node_modules/codemirror/lib/codemirror.css';
+import '../../../node_modules/codemirror/lib/codemirror.css';
 
 export default class Editor extends React.Component<{}, IEditorState> {
 	public constructor(props = {}) {
@@ -18,14 +18,14 @@ export default class Editor extends React.Component<{}, IEditorState> {
 			lineNumbers: true,
 		};
 
-		console.log(this.state); // tslint:disable-line
+		console.log("HELLO", this.state); // tslint:disable-line
 
 		return (
-			<CodeMirror value={ code } onChange={ this.updateCode } options={ options } />
+			<CodeMirror value={code} onChange={this.updateCode} options={options} />
 		);
 	}
 
-	public updateCode = (code: string) => {
+	public updateCode = (editor: any, data: any, code: string) => {
 		this.setState({
 			code
 		});
