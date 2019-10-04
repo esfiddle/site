@@ -1,9 +1,17 @@
 # ESFiddle
 
+Deploy status badge
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f8592abb-ca3a-4843-b053-107718aa0a1b/deploy-status)](https://app.netlify.com/sites/esfiddle/deploys)
+
 [![Greenkeeper badge](https://badges.greenkeeper.io/esfiddle/site.svg)](https://greenkeeper.io/)
+
 [![Join the chat at https://gitter.im/esfiddle/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/esfiddle/Lobby)
+
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](code-of-conduct.md)
+
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+
 [![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](http://www.firsttimersonly.com/)
 
 Try out the latest ES6+ features right in your browser.
