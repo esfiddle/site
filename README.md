@@ -1,8 +1,6 @@
 # ESFiddle
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/esfiddle/esfiddle.svg)](https://greenkeeper.io/)
-
-[![Build Status](https://travis-ci.org/esfiddle/esfiddle.png?branch=master)](https://travis-ci.org/esfiddle/esfiddle)
+[![Greenkeeper badge](https://badges.greenkeeper.io/esfiddle/site.svg)](https://greenkeeper.io/)
 [![Join the chat at https://gitter.im/esfiddle/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/esfiddle/Lobby)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](code-of-conduct.md)
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
