@@ -4,6 +4,7 @@
 
 [![Build Status](https://travis-ci.org/esfiddle/esfiddle.png?branch=master)](https://travis-ci.org/esfiddle/esfiddle)
 [![Join the chat at https://gitter.im/esfiddle/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/esfiddle/Lobby)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](code-of-conduct.md)
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 [![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](http://www.firsttimersonly.com/)
 
@@ -13,28 +14,32 @@ See it online [here](https://esfiddle.net/).
 
 ## Getting Started
 
-_This guide assumes you already have MongoDB and NodeJS installed. Click [here](/docs/HOW_TO_INSTALL_NODEJS_AND_MONGODB.md) for instructions on how to install MongoDB and NodeJS_
-
 Clone the repository
 
 ```bash
 # Get the latest version
-git clone git@github.com:esfiddle/esfiddle.git
+git clone git@github.com:esfiddle/site.git
 
 # Change directory
-cd esfiddle
+cd site
 
-# Update PRIVATE section in sample.env file and rename it to '.env'
-cp sample.env ./.env
+# Project setup
+yarn install
 
-# Open a new terminal window and start MongoDB
-mongod --dbpath path/to/your/db/folder
+# Compiles and hot-reloads for development
+yarn run serve
 
-# Install the dependencies
-npm i
+# Compiles and minifies for production
+yarn run build
 
-# Start the application
-npm start
+# Run your tests
+yarn run test
+
+# Lints and fixes files
+yarn run lint
+
+# Run your unit tests
+yarn run test:unit
 ```
 
 ## Found a bug?
@@ -45,7 +50,7 @@ Read the [Help I've Found a Bug](/docs/REPORTBUG.md) article and follow its inst
 
 Check out our [vision](/docs/VISION.md).
 
-## Contributing [![Open Source Helpers](https://www.codetriage.com/esfiddle/esfiddle/badges/users.svg)](https://www.codetriage.com/esfiddle/esfiddle)
+## Contributing [![Open Source Helpers](https://www.codetriage.com/esfiddle/site/badges/users.svg)](https://www.codetriage.com/esfiddle/site)
 
 We welcome pull requests from first-timers and seasoned veteran programmers alike. Follow the steps above to get setup.
 
@@ -53,6 +58,6 @@ In addition to this we are looking for maintainers. Please come and chat with us
 
 Please first review the [Code of Conduct](/docs/CODE_OF_CONDUCT.md) and the [Contributing guide](/docs/CONTRIBUTE.md) to help you get setup. Our [Style Guide](/docs/AirbnbStyleGuide/README.md) is based on the [Airbnb style guide](https://github.com/airbnb/javascript).
 
-You can help to triage issues. This can include reproducing bug reports, or asking for vital information such as version numbers or reproduction instructions. If you would like to start triaging issues, one easy way to get started is to [subscribe to esfiddle/esfiddle on CodeTriage](https://www.codetriage.com/esfiddle/esfiddle).
+You can help to triage issues. This can include reproducing bug reports, or asking for vital information such as version numbers or reproduction instructions. If you would like to start triaging issues, one easy way to get started is to [subscribe to esfiddle/site on CodeTriage](https://www.codetriage.com/esfiddle/site).
 
-Then have a look at some of the [projects issues](https://github.com/esfiddle/esfiddle/issues) Checkout the labels [first-timers-only](https://github.com/esfiddle/esfiddle/labels/first-timers-only), [bite-size](https://github.com/esfiddle/esfiddle/labels/bite-size) (for small issues) and [up-for-grabs](https://github.com/esfiddle/esfiddle/labels/up-for-grabs).
+Then have a look at some of the [projects issues](https://github.com/esfiddle/site/issues) Checkout the labels [first-timers-only](https://github.com/esfiddle/site/labels/first-timers-only), [bite-size](https://github.com/esfiddle/site/labels/bite-size) (for small issues) and [up-for-grabs](https://github.com/esfiddle/site/labels/up-for-grabs).
