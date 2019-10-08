@@ -46,8 +46,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import { Component, Vue } from 'vue-property-decorator'
 
 export default {
   name: 'about',

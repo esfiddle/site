@@ -10,7 +10,7 @@ import Hero from './Hero/Hero.vue';
 
 export default {
   name: 'Landing',
-  componenets: {
+  components: {
     Hero,
   },
 };
