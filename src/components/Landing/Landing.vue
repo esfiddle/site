@@ -1,7 +1,19 @@
 <template>
   <div class="hello">
-    LANDING
-    <Hero />
+    <div>
+      <section class='header-change-dark'><Hero /></section>
+      <section class='header-change-light landing__fiddle-section'>
+        <div class='landing__fiddle-section__header-row'>
+          <h1>Popular Examples</h1>
+          <router-link to='/examples'>See All</router-link>
+        </div>
+      </section>
+      <section class='header-change-light landing__fiddle-section'>
+        <div class='landing__fiddle-section__header-row'>
+          <h1>Cool Fiddles</h1>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 

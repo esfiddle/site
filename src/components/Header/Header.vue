@@ -1,11 +1,29 @@
 <template>
-  <div></div>
+  <div class='header header-dark'>
+    <div class='header__box'>
+      <SearchBox />
+    </div>
+    <div class='header__box'>
+      <NavLink to="/">
+        <div class='header__logo' />
+      </NavLink>
+    </div>
+    <div class='header__box header__navigation'>
+      <!-- <router-link to="/">Home</router-link> | -->
+      <router-link to="/examples">Examples</router-link>
+      <router-link to="/editor">Editor</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/blog">Blog</router-link>
+      <div class='header__user'>Login</div>
+    </div>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
 
-export default Vue.extend({});
+export default {
+  name: 'Header',
+};
 </script>
 
 <style scoped>

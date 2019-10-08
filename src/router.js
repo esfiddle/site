@@ -23,6 +23,30 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
+      path: '/editor',
+      name: 'editor',
+      // route level code-splitting
+      // this generates a separate chunk (editor.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "editor" */ './views/Editor.vue'),
+    },
+    {
+      path: '/examples',
+      name: 'examples',
+      // route level code-splitting
+      // this generates a separate chunk (Examples.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "examples" */ './views/Examples.vue'),
+    },
+    {
+      path: '/blog',
+      name: 'blog',
+      // route level code-splitting
+      // this generates a separate chunk (blog.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "blog" */ './views/Blog.vue'),
+    },
+    {
       path: '/404',
       component: NotFound,
     },
@@ -31,4 +55,8 @@ export default new Router({
       redirect: '/404',
     },
   ],
+  // eslint-disable-next-line
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  },
 });

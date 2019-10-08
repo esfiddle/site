@@ -1,3 +1,4 @@
+<!-- eslint-disable -->
 <template>
   <div class="hero">
     <div class="hero__image">
@@ -133,13 +134,154 @@ export default {
   border-color: var(--light);
 }
 
-@keyframes a0_t { 0% { transform: translate(640.05px,359.9px) scale(1.05,1.05) translate(-640.05px,-359.9px); } 75% { transform: translate(640.05px,359.9px) scale(1.05,1.05) translate(-640.05px,-359.9px); } 80% { transform: translate(640.05px,359.9px) scale(1,1) translate(-640.05px,-359.9px); } 100% { transform: translate(640.05px,359.9px) scale(1,1) translate(-640.05px,-359.9px); } }
-@keyframes a0_o { 0% { opacity: 0.3; } 75% { opacity: 0.3; } 85% { opacity: 1; } 100% { opacity: 1; } }
-@keyframes a0_s { 0% { stroke: #ffffff; } 75% { stroke: #ffffff; } 85% { stroke: #a8d5be; } 100% { stroke: #a8d5be; } }
-@keyframes a0_sw { 0% { stroke-width: 2px; } 75% { stroke-width: 2px; } 85% { stroke-width: 5px; } 100% { stroke-width: 5px; } }
-@keyframes a0_do { 0% { stroke-dashoffset: 2174px; animation-timing-function: cubic-bezier(0,0,0.658113,0.939608); } 75% { stroke-dashoffset: 985.022px; } 100% { stroke-dashoffset: 985.022px; } }
-@keyframes a1_o { 0% { opacity: 0; } 80% { opacity: 0; } 90% { opacity: 1; } 100% { opacity: 1; } }
-@keyframes a2_o { 0% { opacity: 0; } 85% { opacity: 0; } 95% { opacity: 1; } 100% { opacity: 1; } }
-@keyframes a3_o { 0% { opacity: 0; } 90% { opacity: 0; } 100% { opacity: 1; } }
-@keyframes a4_o { 0% { opacity: 0; } 95% { opacity: 0; } 100% { opacity: 0.5; } }
+@keyframes a0_t {
+  0% {
+    transform: translate(640.05px, 359.9px) scale(1.05, 1.05) translate(-640.05px, -359.9px);
+  }
+
+  75% {
+    transform: translate(640.05px, 359.9px) scale(1.05, 1.05) translate(-640.05px, -359.9px);
+  }
+
+  80% {
+    transform: translate(640.05px, 359.9px) scale(1, 1) translate(-640.05px, -359.9px);
+  }
+
+  100% {
+    transform: translate(640.05px, 359.9px) scale(1, 1) translate(-640.05px, -359.9px);
+  }
+}
+
+@keyframes a0_o {
+  0% {
+    opacity: 0.3;
+  }
+
+  75% {
+    opacity: 0.3;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes a0_s {
+  0% {
+    stroke: #ffffff;
+  }
+
+  75% {
+    stroke: #ffffff;
+  }
+
+  85% {
+    stroke: #a8d5be;
+  }
+
+  100% {
+    stroke: #a8d5be;
+  }
+}
+
+@keyframes a0_sw {
+  0% {
+    stroke-width: 2px;
+  }
+
+  75% {
+    stroke-width: 2px;
+  }
+
+  85% {
+    stroke-width: 5px;
+  }
+
+  100% {
+    stroke-width: 5px;
+  }
+}
+
+@keyframes a0_do {
+  0% {
+    stroke-dashoffset: 2174px;
+    animation-timing-function: cubic-bezier(0, 0, 0.658113, 0.939608);
+  }
+
+  75% {
+    stroke-dashoffset: 985.022px;
+  }
+
+  100% {
+    stroke-dashoffset: 985.022px;
+  }
+}
+
+@keyframes a1_o {
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes a2_o {
+  0% {
+    opacity: 0;
+  }
+
+  85% {
+    opacity: 0;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes a3_o {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes a4_o {
+  0% {
+    opacity: 0;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
 </style>
