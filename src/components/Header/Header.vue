@@ -1,12 +1,12 @@
 <template>
   <div class='header header-dark'>
     <div class='header__box'>
-      <SearchBox />
+      <!-- <SearchBox /> -->
     </div>
     <div class='header__box'>
-      <NavLink to="/">
+      <router-link to="/">
         <div class='header__logo' />
-      </NavLink>
+      </router-link>
     </div>
     <div class='header__box header__navigation'>
       <!-- <router-link to="/">Home</router-link> | -->
@@ -81,7 +81,7 @@ export default {
 
 /* Logo */
 .header__logo {
-  /*background-image: url(@/assets/logo.png);*/
+  background-image: url(../../assets/logo.png);
   background-size: 214px 62px;
   width: 214px;
   height: 31px;

@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <smallLogo />
+        <router-link to="/"><smallLogo /></router-link>
         <div class='spacer'/>
         <div class='footerLinks'>
             <router-link to="/examples">Examples</router-link>
