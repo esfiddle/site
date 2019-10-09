@@ -1,11 +1,29 @@
 <template>
-  <div></div>
+  <div class='header header-dark'>
+    <div class='header__box'>
+      <!-- <SearchBox /> -->
+    </div>
+    <div class='header__box'>
+      <router-link to="/">
+        <div class='header__logo' />
+      </router-link>
+    </div>
+    <div class='header__box header__navigation'>
+      <!-- <router-link to="/">Home</router-link> | -->
+      <router-link to="/examples">Examples</router-link>
+      <router-link to="/editor">Editor</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/blog">Blog</router-link>
+      <div class='header__user'>Login</div>
+    </div>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
 
-export default Vue.extend({});
+export default {
+  name: 'Header',
+};
 </script>
 
 <style scoped>
@@ -63,7 +81,7 @@ export default Vue.extend({});
 
 /* Logo */
 .header__logo {
-  /*background-image: url(@/assets/logo.png);*/
+  background-image: url(../../assets/logo.png);
   background-size: 214px 62px;
   width: 214px;
   height: 31px;

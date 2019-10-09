@@ -46,11 +46,9 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import { Component, Vue } from 'vue-property-decorator'
 
 export default {
-  name: 'about',
+  name: 'About',
 };
 </script>
 
@@ -68,13 +66,13 @@ export default {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
 
   -webkit-box-flex: 1;
   -webkit-flex: 1;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 </style>

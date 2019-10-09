@@ -1,22 +1,21 @@
 <template>
-  <div id="app main">
+  <div id="app">
     <Header />
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view class="main"/>
+    <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Header from '@/components/Header/Header.vue';
+import Footer from '@/components/Footer/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
+    Footer,
   },
 };
 </script>
@@ -38,5 +37,9 @@ export default {
       color: #42b983;
     }
   }
+}
+.main {
+  margin-top: 60px;
+  min-height: calc(100vh - 60px);
 }
 </style>
