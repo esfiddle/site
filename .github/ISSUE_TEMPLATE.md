@@ -1,6 +1,24 @@
-#### Type of issue
+### Type of issue
+
 - [ ] Bug
-- [ ] Idea/Suggestion
+- [ ] Feature/Enhancement
 - [ ] Question
 
-#### Description (include any screenshots or debugging information if applicable)
+### Description
+
+[Description of the bug or feature]
+
+### Steps to Reproduce
+
+1. [First Step]
+2. [Second Step]
+3. [and so on...]
+
+**Expected behavior:** [What you expected to happen]
+
+**Actual behavior:** [What actually happened]
+
+### Versions
+
+ONLY if different than Master currently.
+You can get this information from executing `npm version`.
