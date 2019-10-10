@@ -9,7 +9,7 @@ export default new Vuex.Store({
   },
   mutations: {
     currentTheme(state, theme) {
-      !theme ? state.theme = 'light' : state.theme = 'dark';
+      !theme ? state.theme = 'light' : state.theme = 'dark'; // eslint-disable-line no-unused-expressions
     },
   },
   getter: {

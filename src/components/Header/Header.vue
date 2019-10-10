@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import store from '@/store.js'; // eslint-disable-line import/extensions
+import store from '@/store.js'; // eslint-disable-line
 
 export default {
   name: 'Header',
@@ -36,8 +36,6 @@ export default {
   },
   methods: {
     switchTheme(event) {
-      console.log(`test ${store.state.theme}`);
-      console.log(event.target.checked);
       this.$store.commit('currentTheme', event.target.checked);
     },
   },

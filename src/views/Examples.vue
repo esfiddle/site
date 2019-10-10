@@ -1,37 +1,30 @@
 <template>
-  <div class="examples">
+  <div v-bind:class='[`examples examples-${themeState}`]'>
     <h1>Examples</h1>
   </div>
 </template>
 
 <script>
+import store from '@/store.js'; // eslint-disable-line
 
 export default {
   name: 'Examples',
+  computed: {
+    themeState() {
+      return this.$store.state.theme;
+    },
+  },
 };
 </script>
 
 <style scoped>
-.about {
-  width: 70%;
-  padding-top: 60px;
-  margin: auto;
-  max-width: 800px;
+.examples {
+  background: #fff;
+  padding: 60px;
+}
 
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 100vh;
-
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+.examples-dark {
+  background: var(--dark);
+  color: #fff;
 }
 </style>
