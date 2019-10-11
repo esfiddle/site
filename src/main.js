@@ -10,15 +10,15 @@ import './index.css';
 
 Vue.config.productionTip = false;
 
-let app = '';
+const app = '';
 
-firebase.auth().onAuthStateChanged(user => {
+firebase.auth().onAuthStateChanged((user) => { // eslint-disable-line no-unused-vars
   if (!app) {
     new Vue({
       router,
       store,
       firebase,
       render: h => h(App),
-    }).$mount('#app')
+    }).$mount('#app');
   }
 });

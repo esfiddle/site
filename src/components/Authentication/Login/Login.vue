@@ -4,19 +4,23 @@
     <form @submit.prevent="login">
       <input type="email" placeholder="Email" v-model="email" /><br>
       <input type="password" placeholder="Password" v-model="password" /><br>
-      <button @click='login'>Login</button>
+      <Button @click='login' buttonText='Login' />
     </form>
-    <p>Or <router-link to='/signup'>Sign Up</router-link></p>
+    <p class='message'>Or <router-link to='/signup'>Sign Up</router-link></p>
   </div>
 </template>
 
 <script>
 import router from '@/router.js'; // eslint-disable-line
 import firebase from 'firebase'; // eslint-disable-line
-import db from "@/firestore.js"; // eslint-disable-line
+import db from '@/firestore.js'; // eslint-disable-line
+import Button from '@/components/Button/Button.vue';
 
 export default {
   name: 'Login',
+  components: {
+    Button,
+  },
   data() {
     return {
       email: '',
@@ -44,16 +48,38 @@ export default {
     margin-top: 80px;
 }
 
-input {
-    margin: 10px 0;
-    width: 20%;
-    padding: 15px;
+form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-button {
-    margin: 10px 0;
-    width: 20%;
-    padding: 15px;
+form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+form .message a {
+  color: #4CAF50;
+  text-decoration: none;
 }
 
 p {

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import firebase from 'firebase';
-import firestore from './firestore.js';
+import firestore from './firestore.js'; // eslint-disable-line
 
 Vue.use(Router);
 
