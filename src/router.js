@@ -1,54 +1,67 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import NotFound from './components/NotFound/NotFound.vue';
+import firebase from 'firebase';
+import firestore from './firestore.js'; // eslint-disable-line
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: process.env.publicPath,
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
-      component: Home,
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "home" */ './views/Home.vue'),
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: () => import('./views/About.vue'),
     },
     {
       path: '/editor',
       name: 'editor',
-      // route level code-splitting
-      // this generates a separate chunk (editor.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "editor" */ './views/Editor.vue'),
+      component: () => import('./views/Editor.vue'),
     },
     {
       path: '/examples',
       name: 'examples',
-      // route level code-splitting
-      // this generates a separate chunk (Examples.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "examples" */ './views/Examples.vue'),
+      component: () => import('./views/Examples.vue'),
     },
     {
       path: '/blog',
       name: 'blog',
-      // route level code-splitting
-      // this generates a separate chunk (blog.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "blog" */ './views/Blog.vue'),
+      component: () => import('./views/Blog.vue'),
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('./components/Authentication/Login/Login.vue'),
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: () => import('./components/Authentication/Signup/Signup.vue'),
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('./components/Profile/Profile.vue'),
+      meta: {
+        requiresAuth: true,
+      },
     },
     {
       path: '/404',
-      component: NotFound,
+      component: () => import('./components/NotFound/NotFound.vue'),
+    },
+    {
+      path: '/',
+      redirect: '/home',
     },
     {
       path: '*',
@@ -60,3 +73,14 @@ export default new Router({
     return { x: 0, y: 0 };
   },
 });
+
+router.beforeEach((to, from, next) => {
+  const { currentUser } = firebase.auth();
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+
+  if (requiresAuth && !currentUser) next('login');
+  else if (!requiresAuth && currentUser) next('profile');
+  else next();
+});
+
+export default router;

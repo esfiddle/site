@@ -10,7 +10,7 @@
       </label>
     </div>
     <div class='header__box'>
-      <router-link to='/'>
+      <router-link to='/home'>
         <div v-bind:class='[`header__logo header__logo-${themeState}`]' />
       </router-link>
     </div>
@@ -19,16 +19,22 @@
       <router-link to='/editor'>Editor</router-link>
       <router-link to='/about'>About</router-link>
       <router-link to='/blog'>Blog</router-link>
-      <div class='header__user'>Login</div>
+      <a @click.prevent.stop="logout">Logout</a>
+      <LoginButton class='header__user' />
     </div>
   </div>
 </template>
 
 <script>
+import firebase from 'firebase';
 import store from '@/store.js'; // eslint-disable-line
+import LoginButton from '@/components/Authentication/Login/LoginButton/LoginButton.vue';
 
 export default {
   name: 'Header',
+  components: {
+    LoginButton,
+  },
   computed: {
     themeState() {
       return this.$store.state.theme;
@@ -37,6 +43,11 @@ export default {
   methods: {
     switchTheme(event) {
       this.$store.commit('currentTheme', event.target.checked);
+    },
+    logout() {
+      firebase.auth().signOut().then(() => {
+        this.$router.replace('login');
+      });
     },
   },
 };
