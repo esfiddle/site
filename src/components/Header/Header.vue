@@ -10,7 +10,7 @@
       </label>
     </div>
     <div class='header__box'>
-      <router-link to='/'>
+      <router-link to='/home'>
         <div v-bind:class='[`header__logo header__logo-${themeState}`]' />
       </router-link>
     </div>
@@ -19,16 +19,20 @@
       <router-link to='/editor'>Editor</router-link>
       <router-link to='/about'>About</router-link>
       <router-link to='/blog'>Blog</router-link>
-      <div class='header__user'>Login</div>
+      <LoginButton class='header__user' />
     </div>
   </div>
 </template>
 
 <script>
 import store from '@/store.js'; // eslint-disable-line
+import LoginButton from '@/components/Authentication/Login/LoginButton/LoginButton.vue';
 
 export default {
   name: 'Header',
+  components: {
+    LoginButton,
+  },
   computed: {
     themeState() {
       return this.$store.state.theme;

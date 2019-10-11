@@ -2,6 +2,10 @@
     <footer>
         <router-link to="/"><smallLogo /></router-link>
         <div class='spacer'/>
+        <a href="https://www.netlify.com">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"/>
+        </a>
+        <div class='spacer'/>
         <div class='footerLinks'>
             <router-link to="/examples">Examples</router-link>
             <router-link to="/editor">Editor</router-link>
