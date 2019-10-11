@@ -19,12 +19,14 @@
       <router-link to='/editor'>Editor</router-link>
       <router-link to='/about'>About</router-link>
       <router-link to='/blog'>Blog</router-link>
+      <a @click.prevent.stop="logout">Logout</a>
       <LoginButton class='header__user' />
     </div>
   </div>
 </template>
 
 <script>
+import firebase from 'firebase';
 import store from '@/store.js'; // eslint-disable-line
 import LoginButton from '@/components/Authentication/Login/LoginButton/LoginButton.vue';
 
@@ -41,6 +43,11 @@ export default {
   methods: {
     switchTheme(event) {
       this.$store.commit('currentTheme', event.target.checked);
+    },
+    logout() {
+      firebase.auth().signOut().then(() => {
+        this.$router.replace('login');
+      });
     },
   },
 };

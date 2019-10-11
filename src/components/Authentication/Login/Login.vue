@@ -4,9 +4,8 @@
     <form @submit.prevent="login">
       <input type="email" placeholder="Email" v-model="email" /><br>
       <input type="password" placeholder="Password" v-model="password" /><br>
-      <button>Login</button>
+      <button @click='login'>Login</button>
     </form>
-    <button @click='login'>Log In</button>
     <p>Or <router-link to='/signup'>Sign Up</router-link></p>
   </div>
 </template>
