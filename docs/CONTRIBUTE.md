@@ -7,7 +7,7 @@ We welcome pull requests from first-timers and seasoned veteran programmers alik
 
 2. Find an issue to work with the tag '[first-timers-only](https://github.com/esfiddle/site/labels/%3Atada%3A%20good%20first%20issue)', '[up-for-grabs](https://github.com/esfiddle/site/labels/up-for-grabs)', or '[help-wanted](https://github.com/esfiddle/site/labels/%3Asos%3A%20help-wanted)'. Or Raise a [new issue](https://github.com/esfiddle/site/issues/new)
 
-3. Let us know you are working on the issue by commenting on it. Make sure that you submit your pull request within a week of claiming it incase someone else wants to do it. [1]
+3. _Let us know you are working on the issue by commenting on it and assigning it to yourself._ There is a bot that will automatically create a branch for you when you assign the issue to yourself. Also, please strive to submit your pull request within a week of claiming it in case someone else wants to do it. [1]
 
 4. Follow the [Contribution guide](CONTRIBUTE.md) and the [Code of Conduct](CODE_OF_CONDUCT.md)
 

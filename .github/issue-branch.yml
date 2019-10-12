@@ -1,0 +1,8 @@
+branchName: short
+branches:
+  - label: enhancement
+    prefix: feature/
+  - label: bug
+    prefix: bugfix/
+  - label: maintenance
+    prefix: maintenance/

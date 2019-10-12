@@ -3,15 +3,15 @@ tag-template: "v$NEXT_PATCH_VERSION"
 categories:
   - title: "🚀 Features"
     labels:
-      - "feature"
-      - "enhancement"
+      - ":rocket: feature"
+      - ":rocket: enhancement"
   - title: "🐛 Bug Fixes"
     labels:
       - "fix"
       - "bugfix"
-      - "bug"
+      - ":bug: bug"
   - title: "🔧 Maintenance"
-    label: "chore"
+    label: ":wrench: chore"
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 template: |
   ## Changes
