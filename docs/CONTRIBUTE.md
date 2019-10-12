@@ -5,7 +5,7 @@ We welcome pull requests from first-timers and seasoned veteran programmers alik
 
 1. Star the Repo :star: Click the 'Star' button in the top right!
 
-2. Find an issue to work with the tag '[first-timers-only](https://github.com/esfiddle/site/labels/first-timers-only)' or '[up-for-grabs](https://github.com/esfiddle/site/labels/up-for-grabs)'. Or Raise a [new issue](https://github.com/esfiddle/site/issues/new)
+2. Find an issue to work with the tag '[first-timers-only](https://github.com/esfiddle/site/labels/%3Atada%3A%20good%20first%20issue)', '[up-for-grabs](https://github.com/esfiddle/site/labels/up-for-grabs)', or '[help-wanted](https://github.com/esfiddle/site/labels/%3Asos%3A%20help-wanted)'. Or Raise a [new issue](https://github.com/esfiddle/site/issues/new)
 
 3. Let us know you are working on the issue by commenting on it. Make sure that you submit your pull request within a week of claiming it incase someone else wants to do it. [1]
 
