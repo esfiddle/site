@@ -1,6 +1,5 @@
 #### Pre-Submission Checklist
 
-- [ ] Your pull request targets the `develop` branch.
 - [ ] PR starts with either 🚀 (`:rocket:` for feature), 🐛 (`:bug:` for bug fix), 🔧 (`:wrench:` for maintenence).
 
 #### Type of Change
