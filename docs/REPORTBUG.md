@@ -6,7 +6,7 @@ If you think you've found a bug, please follow these steps to resolve your probl
 
 1. If the page seems broken in any way, try to do a Hard Refresh (see on the bottom of this file) of the page. This will update any old code that may have been cached in your browser. If your code crashes your browser, also try Clearing Your Browser's Local Storage.
 
-2. Try [searching for your issue on gitHub](https://github.com/esfiddle/site/issues/) too see if anyone elsehas posted about a similar issue about the bug you have found too. If someone has, you can upvote the issue by replying to it with "+1" as your message.
+2. Try [searching for your issue on gitHub](https://github.com/esfiddle/site/issues/) to see if anyone else has posted about a similar issue. If someone has, you can upvote the issue by replying to it with "+1" as your message.
 
 3. If you can't find any relevant issues on GitHub, then create a new issue (see below) and our development team will take a look at your problem.
 
@@ -14,8 +14,7 @@ If you think you've found a bug, please follow these steps to resolve your probl
 
 ### Create a New Issue
 
-Crafting a good issue will make it much easier for the dev team to replicate and resolve your problem.
-Follow these steps to do it right:
+Crafting a good issue will make it much easier for the dev team to replicate and resolve your problem. Follow these steps to do it right:
 
 1. Go to our [gitHub Issues page](https://github.com/esfiddle/site/issues/) and click on **New Issue**.
 2. **Have a useful title**
@@ -29,8 +28,9 @@ Follow these steps to do it right:
      you might want to write _Test case bug in 'Radio Buttons' Challenge_.
 
 3. In the body, **provide a link** to the page on which you encountered this issue.
-4. Describe the problem and provide steps so that a developer can try to replicate the issue. Include your operating system and browser version.
-   - When referencing other issues or pull requests, simply write #issue/pr-number.
+4. Describe the problem and provide steps so that a developer can try to replicate the issue. Include your browser version.
+   - When referencing other issues or pull requests, simply write #issue
+     or #pr-number.
 5. **Take a screenshot** of the issue and include it in the post if possible.
 6. Click **Submit New Issue** and you are done! You will be automatically subscribed to notifications for any updates or future comments.
 
