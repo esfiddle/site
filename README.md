@@ -47,7 +47,7 @@ We welcome pull requests from first-timers and seasoned veteran programmers alik
 
 In addition to this we are looking for maintainers. Please come and chat with us in our [gitter](https://gitter.im/esfiddle/Lobby) if you are interested.
 
-Please first review the [Code of Conduct](/docs/CODE_OF_CONDUCT.md) and the [Contributing guide](/docs/CONTRIBUTE.md) to help you get setup. Our [Style Guide](/docs/AirbnbStyleGuide/README.md) is based on the [Airbnb style guide](https://github.com/airbnb/javascript).
+Please first review the [Code of Conduct](/docs/CODE_OF_CONDUCT.md) and the [Contributing guide](CONTRIBUTING.md) to help you get setup. Our [Style Guide](/docs/AirbnbStyleGuide/README.md) is based on the [Airbnb style guide](https://github.com/airbnb/javascript).
 
 You can help to triage issues. This can include reproducing bug reports, or asking for vital information such as version numbers or reproduction instructions. If you would like to start triaging issues, one easy way to get started is to [subscribe to esfiddle/site on CodeTriage](https://www.codetriage.com/esfiddle/site).
 
