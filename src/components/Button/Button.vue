@@ -23,12 +23,19 @@ export default {
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 button:hover,button:active,button:focus {
+  background: #43A047;
+}
+
+.header__user .button {
+  padding: 0 20px;
+}
+
+.header__user button:hover,button:active,button:focus {
   background: #43A047;
 }
 

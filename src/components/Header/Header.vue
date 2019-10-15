@@ -19,35 +19,39 @@
       <router-link to='/editor'>Editor</router-link>
       <router-link to='/about'>About</router-link>
       <router-link to='/blog'>Blog</router-link>
-      <a @click.prevent.stop="logout">Logout</a>
-      <LoginButton class='header__user' />
+      <router-link to='/profile' v-if='isAuthorized'>
+        <Button class='header__user' buttonText='Profile' />
+      </router-link>
+      <router-link to='/login' v-if='!isAuthorized'>
+        <Button class='header__user' buttonText='Log In' />
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
-import firebase from 'firebase';
+import firebase from 'firebase'; // eslint-disable-line
 import store from '@/store.js'; // eslint-disable-line
-import LoginButton from '@/components/Authentication/Login/LoginButton/LoginButton.vue';
+import Button from '@/components/Button/Button.vue';
 
 export default {
   name: 'Header',
   components: {
-    LoginButton,
+    Button,
   },
   computed: {
     themeState() {
       return this.$store.state.theme;
     },
+    isAuthorized() {
+      console.log(`vuex authenticated - ${this.$store.state.authorized}`);
+      console.log(`localStorage authorized - ${localStorage.vuex}`);
+      return this.$store.state.authorized;
+    },
   },
   methods: {
     switchTheme(event) {
       this.$store.commit('currentTheme', event.target.checked);
-    },
-    logout() {
-      firebase.auth().signOut().then(() => {
-        this.$router.replace('login');
-      });
     },
   },
 };

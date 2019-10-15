@@ -15,7 +15,8 @@
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vue-svg-loader": "^0.12.0",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",

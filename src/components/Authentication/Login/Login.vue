@@ -11,9 +11,10 @@
 </template>
 
 <script>
+import firebase from 'firebase'; // eslint-disable-line import/extensions
 import router from '@/router.js'; // eslint-disable-line
-import firebase from 'firebase'; // eslint-disable-line
 import db from '@/firestore.js'; // eslint-disable-line
+import store from '@/store.js'; // eslint-disable-line import/extensions
 import Button from '@/components/Button/Button.vue';
 
 export default {
@@ -32,8 +33,9 @@ export default {
   methods: {
     login() {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        .then((user) => {
-          console.log(user);
+        .then(() => {
+          store.commit('setAuthorization', true);
+          this.$router.push('profile');
         })
         .catch((err) => {
           this.errorMessage = err.message;

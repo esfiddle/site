@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import firebase from 'firebase';
 import firestore from './firestore.js'; // eslint-disable-line
+import store from './store.js';
 
 Vue.use(Router);
 
@@ -64,6 +65,10 @@ const router = new Router({
       redirect: '/home',
     },
     {
+      path: '/home',
+      redirect: '/home',
+    },
+    {
       path: '*',
       redirect: '/404',
     },
@@ -79,7 +84,6 @@ router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
 
   if (requiresAuth && !currentUser) next('login');
-  else if (!requiresAuth && currentUser) next('profile');
   else next();
 });
 
