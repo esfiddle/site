@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import firebase from 'firebase';
 import firestore from './firestore.js'; // eslint-disable-line
-import store from './store.js';
+import store from './store.js'; // eslint-disable-line
 
 Vue.use(Router);
 
@@ -62,10 +62,6 @@ const router = new Router({
     },
     {
       path: '/',
-      redirect: '/home',
-    },
-    {
-      path: '/home',
       redirect: '/home',
     },
     {

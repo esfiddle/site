@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import createPersistedState from 'vuex-persistedstate'
+import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex);
 
@@ -11,7 +11,7 @@ export default new Vuex.Store({
   },
   mutations: {
     currentTheme(state, theme) {
-      !theme ? state.theme = 'light' : state.theme = 'dark';
+      !theme ? state.theme = 'light' : state.theme = 'dark'; // eslint-disable-line
     },
     setAuthorization(state, value) {
       state.authorized = value;
@@ -24,6 +24,6 @@ export default new Vuex.Store({
 
   },
   plugins: [
-    createPersistedState()
+    createPersistedState(),
   ],
 });
