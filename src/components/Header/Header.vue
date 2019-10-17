@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import firebase from 'firebase'; // eslint-disable-line
 import store from '@/store.js'; // eslint-disable-line
 import Button from '@/components/Button/Button.vue';
 

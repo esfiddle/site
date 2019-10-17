@@ -39,6 +39,16 @@ button:hover,button:active,button:focus {
   background: #43A047;
 }
 
+/* .button__social .button {
+  width: 75px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  outline: 0;
+  border: 0;
+} */
+
 .button-light {
 
 }
