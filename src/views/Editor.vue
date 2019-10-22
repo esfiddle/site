@@ -1,9 +1,9 @@
 <template>
   <div id="editor">
-    <div v-for="let line of lines; let i = index" id="{{i}}" class="row" (click)="focus($event)">
+    <div v-for="let line of lines; let i = index" v-bind:id="i" class="row" :click="focus($event)">
       <div title="{{i}}">{{i + 1}}</div>
       <div title="{{i}}">
-        <span v-for="let token of line; let j = index" title="{{j}}" class="{{token.type}}">
+        <span v-for="let token of line; let j = index" v-bind:title="j" :class="token.type">
           {{token.content}}
         </span>
       </div>
@@ -131,7 +131,7 @@ export default class Editor extends Vue {
     const { down } = this;
 
     document.removeEventListener('keydown', down);
-    delete (document as any).removeEditorListeners;
+    delete document.removeEditorListeners;
 
     clearInterval(this.interval);
     this.interval = null;
@@ -142,7 +142,7 @@ export default class Editor extends Vue {
     }
   }
 
-  run = async (event) => {
+  run = (event) => {
     const { lines } = this;
 
     let code = '';
@@ -156,19 +156,7 @@ export default class Editor extends Vue {
       if (prev !== code) code += '\n';
     }
 
-    const res = await fetch('https://interpreter.pumpkinspicelatte.org/code', {
-      method: 'post',
-      headers: {
-        'Content-Type': 'text/plain',
-        "Accept": 'application/json',
-      },
-      mode: 'cors',
-      body: code,
-    }).then(res => res.json())
-
-    const result = document.getElementsByClassName('result')[0];
-    result.innerHTML = res.stdout || res.stderr;
-    (document as any).toggleResult();
+    return eval(code)
   }
 
   focus = (event) => {
@@ -190,7 +178,7 @@ export default class Editor extends Vue {
     }
 
     document.addEventListener('keydown', down);
-    (document as any).removeEditorListeners = blur;
+    document.removeEditorListeners = blur;
 
     this.count();
     if (!this.interval) this.interval = setInterval(() => {
