@@ -1,15 +1,15 @@
 <template>
   <div id="editor">
-    <div v-for="let line of lines; let i = index" v-bind:id="i" class="row" :click="focus($event)">
-      <div title="{{i}}">{{i + 1}}</div>
-      <div title="{{i}}">
-        <span v-for="let token of line; let j = index" v-bind:title="j" :class="token.type">
+    <div v-for="(line, index) in lines" :id="i = index" :key="'line-'+i" class="row" v-on:click="focus">
+      <div :title="i">{{i + 1}}</div>
+      <div :title="i">
+        <span v-for="(token, index) in line" :key="'line-'+i+'-token-'+(j=index)" :title="j" :class="token.type">
           {{token.content}}
         </span>
       </div>
     </div>
     <div id="caret" class="hidden">|</div>
-    <button id="run" aria-label="run javascript program" :click="run($event)">
+    <button id="run" aria-label="run javascript program" v-on:click="run">
       <i nz-icon nzType="caret-right"></i>
     </button>
   </div>
@@ -410,10 +410,10 @@ export default class Editor extends Vue {
 
 <style scoped>
 #run {
-  right: 30px;
+  right: 25px;
   width: 50px;
   z-index: 10;
-  bottom: 30px;
+  bottom: 75px;
   float: right;
   height: 50px;
   font-size: 35px;
@@ -430,14 +430,15 @@ export default class Editor extends Vue {
 #caret.hidden {
   display: none;
 }
-
 #editor {
   color: white;
   display: flex;
   overflow: auto;
   flex-wrap: wrap;
+  flex-direction: column;
   font-family: monospace;
   background-color: black;
+  min-height: calc(100vh - 120px);
 }
 
 #editor .row {
