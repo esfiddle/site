@@ -437,7 +437,7 @@ export default class Editor extends Vue {
   flex-wrap: wrap;
   flex-direction: column;
   font-family: monospace;
-  background-color: black;
+  background-color: var(--editor-bg);
   min-height: calc(100vh - 120px);
 }
 
