@@ -34,7 +34,6 @@ dd {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -92,8 +91,8 @@ select {
 
 body {
   font-family: 'Didact Gothic', sans-serif;
+  overflow-x: hidden;
   color: #555;
-  /*overflow-x: hidden;*/
 }
 
 * {
