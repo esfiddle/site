@@ -1,7 +1,7 @@
 export default {
   OPEN: 'OPEN',
   CLOSE: 'CLOSE',
-  ID:  'ID',
+  ID: 'ID',
   OUT: 'OUT',
   IN: 'IN',
   ERROR: 'ERROR',
@@ -15,4 +15,4 @@ export default {
   LITERAL: 'LITERAL',
   NONE: 'NONE',
   REFID: 'REFID',
-}
+};
