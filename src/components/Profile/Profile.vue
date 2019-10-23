@@ -1,7 +1,7 @@
 <template>
   <div class="profile">
     <h1>Profile</h1>
-    <a @click.prevent.stop="logout">Logout</a>
+    <a href="#" @click.prevent.stop="logout">Logout</a>
   </div>
 </template>
 
