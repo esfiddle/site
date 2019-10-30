@@ -17,6 +17,10 @@ export default {
     Header,
     Footer,
   },
+  mounted() {
+    const bodyTag = document.body;
+    bodyTag.classList.add(this.$store.state.theme);
+  },
 };
 </script>
 
