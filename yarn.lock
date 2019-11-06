@@ -10427,10 +10427,10 @@ vue-style-loader@^4.1.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-svg-loader@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/vue-svg-loader/-/vue-svg-loader-0.13.0.tgz#af982f06b50a15d0c3c9733e2a6a30cf79fb38d4"
-  integrity sha512-k+ArWuQJQB9BCII5SRCp7nxVH7TIvKFjg5uZfXsE6dajt8gL9crdHlE9s5JI/R/1HIa3VVXzvr/uhI9Y/dc8Ww==
+vue-svg-loader@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/vue-svg-loader/-/vue-svg-loader-0.14.0.tgz#672358ffb3aea4f4f5c4f6659a44feba8e0cca4a"
+  integrity sha512-MRHbKsj+u0lGoElCJ+ZvCZpCl+xNiZW8sfeyfB3wIa0G5P4qKBXhpHvhFIXupxQAEdJu0vaC/CUsLeAmXeluuw==
   dependencies:
     loader-utils "^1.2.3"
     svg-to-vue "^0.5.0"
