@@ -45,8 +45,8 @@
     <div class="hero__text-sub">You are about to enter a lab.</div>
     <div class="spacer" />
     <div class="hero__action-buttons">
-      <p>Open Editor</p>
-      <p>Browse Examples</p>
+      <router-link to='/editor'>Open Editor</router-link>
+      <router-link to='/examples'>Browse Examples</router-link>
     </div>
     <div class="spacer" />
   </div>
@@ -127,6 +127,7 @@ export default {
   font-size: 1.4em;
   opacity: 0;
   animation: hero-fade-in 1s ease 2.5s forwards;
+  white-space: nowrap;
 }
 .hero__action-buttons > a:hover {
   background: var(--light);

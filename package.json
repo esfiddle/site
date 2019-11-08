@@ -14,8 +14,9 @@
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
-    "vue-svg-loader": "^0.12.0",
-    "vuex": "^3.0.1"
+    "vue-svg-loader": "^0.14.0",
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
@@ -28,8 +29,8 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "eslint": "^6.6.0",
+    "eslint-plugin-vue": "^6.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"

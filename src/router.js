@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import firebase from 'firebase';
 import firestore from './firestore.js'; // eslint-disable-line
+import store from './store.js'; // eslint-disable-line
 
 Vue.use(Router);
 
@@ -79,7 +80,6 @@ router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
 
   if (requiresAuth && !currentUser) next('login');
-  else if (!requiresAuth && currentUser) next('profile');
   else next();
 });
 
