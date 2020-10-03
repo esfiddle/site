@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp, h } from 'vue';
 import firebase from 'firebase';
 import App from './App.vue';
 import router from './router';
@@ -8,17 +8,13 @@ import './registerServiceWorker';
 import './index.css';
 
 
-Vue.config.productionTip = false;
-
 const app = '';
 
 firebase.auth().onAuthStateChanged((user) => { // eslint-disable-line no-unused-vars
   if (!app) {
-    new Vue({
-      router,
-      store,
+    createApp({
       firebase,
-      render: h => h(App),
-    }).$mount('#app');
+      render: () => h(App),
+    }).use(router).use(store).mount('#app');
   }
 });

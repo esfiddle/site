@@ -1,10 +1,7 @@
-import Vue from 'vue';
 import Vuex from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
 
-Vue.use(Vuex);
-
-export default new Vuex.Store({
+export default Vuex.createStore({
   state: {
     authorized: false,
     theme: '',
@@ -18,7 +15,7 @@ export default new Vuex.Store({
     },
   },
   getter: {
-    theme: state => state.theme,
+    theme: (state) => state.theme,
   },
   actions: {
 
