@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer.vue renders Footer properly 1`] = `
+<footer>
+  <router-link to="/">
+    <!---->
+  </router-link>
+  <div class="spacer"></div> <a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"></a>
+  <div class="spacer"></div>
+  <div class="footerLinks">
+    <router-link to="/examples">Examples</router-link>
+    <router-link to="/editor">Editor</router-link>
+    <router-link to="/about">About</router-link>
+    <router-link to="/blog">Blog</router-link>
+  </div>
+</footer>
+`;
+
+exports[`Footer.vue renders props.msg when passed 1`] = `
+<footer>
+  <router-link to="/">
+    <!---->
+  </router-link>
+  <div class="spacer"></div> <a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"></a>
+  <div class="spacer"></div>
+  <div class="footerLinks">
+    <router-link to="/examples">Examples</router-link>
+    <router-link to="/editor">Editor</router-link>
+    <router-link to="/about">About</router-link>
+    <router-link to="/blog">Blog</router-link>
+  </div>
+</footer>
+`;
