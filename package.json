@@ -11,7 +11,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "register-service-worker": "^1.7.1",
-    "firebase": "^7.20.0",
+    "firebase": "^7.23.0",
     "vue": "^2.6.10",
     "vue-router": "^3.4.3",
     "vue-svg-loader": "^0.16.0",
