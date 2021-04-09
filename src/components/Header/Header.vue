@@ -50,7 +50,13 @@ export default {
   },
   methods: {
     switchTheme(event) {
+      const bodyTag = document.body;
+      // eslint-disable-next-line no-unused-expressions
+      bodyTag.classList.contains('light')
+        ? bodyTag.classList.remove('light')
+        : bodyTag.classList.remove('dark');
       this.$store.commit('currentTheme', event.target.checked);
+      bodyTag.classList.add(this.$store.state.theme);
     },
   },
 };
